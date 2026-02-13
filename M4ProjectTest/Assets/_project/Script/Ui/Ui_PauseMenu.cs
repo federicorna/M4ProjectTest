@@ -11,9 +11,9 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown (KeyCode.Escape) && !_pauseMenu.activeSelf)
         {
-            Debug.Log("Pausa");
+            Debug.Log ("Pausa");
 
-            _pauseMenu.SetActive(true);
+            _pauseMenu.SetActive (true);
             Time.timeScale = 0;
 
             Cursor.lockState = CursorLockMode.None;
@@ -24,7 +24,7 @@ public class PauseMenu : MonoBehaviour
 
     public void OnClickResumeGame()
     {
-        _pauseMenu.SetActive(false);
+        _pauseMenu.SetActive (false);
         Time.timeScale = 1;
 
         Cursor.lockState = CursorLockMode.Locked;
@@ -34,12 +34,12 @@ public class PauseMenu : MonoBehaviour
 
     public void OnClickRestart()
     {
-        SceneManager.LoadScene("Level");
+        SceneManager.LoadScene ("Level");
     }
 
 
     public void OnClickExit()
     {
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene ("Main Menu");
     }
 }

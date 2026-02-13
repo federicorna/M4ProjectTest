@@ -4,11 +4,11 @@ using UnityEngine;
 public class GroundCheker : MonoBehaviour
 {
     [SerializeField] private float _groundDistance = 0.2f;
-    [SerializeField] private LayerMask _groundMask;
+    [SerializeField] private LayerMask _groundLayer;
 
     public bool IsGrounded()
     {
-        return Physics.CheckSphere(transform.position, _groundDistance, _groundMask);
+        return Physics.CheckSphere(transform.position, _groundDistance, _groundLayer);
     }
 
     private void OnDrawGizmos()

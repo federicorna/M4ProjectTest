@@ -9,13 +9,13 @@ public class NewBehaviourScript : MonoBehaviour
 
     public void OnClickNewGame()
     {
-        SceneManager.LoadScene("Level");
+        SceneManager.LoadScene ("Level");
     }
 
 
     public void OnClickExit()
     {
-        Debug.Log("Exit");
+        Debug.Log ("Exit");
         Application.Quit();
     }
 }
