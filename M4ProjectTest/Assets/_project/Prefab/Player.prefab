@@ -115,6 +115,7 @@ GameObject:
   - component: {fileID: 4388652512127098792}
   - component: {fileID: 3387237475158410779}
   - component: {fileID: 344150162280895999}
+  - component: {fileID: 3984108800578621544}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -254,6 +255,36 @@ MonoBehaviour:
   _moveSpeed: 5
   _rotationSpeed: 200
   _jumpHeight: 2
+--- !u!114 &3984108800578621544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4593843489654416055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f6a4554dade4dbf95bf37596b0c769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentHp: 10
+  _maxHp: 10
+  _fullHpOnStart: 1
+  _onHpChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Ui_LifeBar, Assembly-CSharp
+        m_MethodName: UpdateGraphics
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5388579842101165726
 GameObject:
   m_ObjectHideFlags: 0
