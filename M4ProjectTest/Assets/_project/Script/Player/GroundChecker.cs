@@ -1,19 +1,19 @@
 
 using UnityEngine;
 
-public class GroundCheker : MonoBehaviour
+public class GroundChecker : MonoBehaviour
 {
     [SerializeField] private float _groundDistance = 0.2f;
     [SerializeField] private LayerMask _groundLayer;
-
-    public bool IsGrounded()
+    public bool IsGrounded;
+    private void Update()
     {
-        return Physics.CheckSphere(transform.position, _groundDistance, _groundLayer);
+        IsGrounded = Physics.CheckSphere(transform.position, _groundDistance, _groundLayer);
     }
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = IsGrounded() ? Color.green : Color.blue;
+        Gizmos.color = IsGrounded ? Color.green : Color.blue;
         Gizmos.DrawWireSphere(transform.position, _groundDistance);
     }
 }
