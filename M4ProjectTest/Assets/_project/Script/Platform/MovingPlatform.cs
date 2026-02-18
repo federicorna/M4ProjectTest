@@ -16,14 +16,11 @@ public class MovingPlatform : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Movimento Kinematic: sposta la piattaforma fisicamente
-        transform.position = Vector3.MoveTowards(transform.position, _target, _speed * Time.fixedDeltaTime);
+        transform.position = Vector3.MoveTowards (transform.position, _target, _speed * Time.fixedDeltaTime);
 
         if (Vector3.Distance(transform.position, _target) < 0.1f)
         {
             _target = _target == _pointA.position ? _pointB.position : _pointA.position;
         }
     }
-
-
 }

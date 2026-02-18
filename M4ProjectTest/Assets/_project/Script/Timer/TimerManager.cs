@@ -27,4 +27,9 @@ public class TimerManager : MonoBehaviour
             SceneManager.LoadScene("Fail menu");
         }
     }
+
+    public void AddTime(float time)
+    {
+        _timeRemaning += time;
+    }
 }
