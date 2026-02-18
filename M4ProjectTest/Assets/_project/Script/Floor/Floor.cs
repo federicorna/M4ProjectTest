@@ -1,19 +1,15 @@
 
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 
-public class Bomb : MonoBehaviour
+public class Floor : MonoBehaviour
 {
-    [SerializeField] private int _damage = -2;
-
-
     private void OnCollisionEnter (Collision collision)
     {
         if (collision.collider.TryGetComponent<LifeController> (out var life))
         {
-            life.AddHp(_damage);
-
-            Destroy(gameObject);
+            SceneManager.LoadScene("Fail menu");
         } 
     }
 }
